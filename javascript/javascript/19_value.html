@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<table border="1px" cellspacing="0px" cellpadding="4px" align="center" width="150px">
+<tr>
+ <td colspan="2">Calculator</td>
+</tr>
+
+<tr>
+ <td>Number1:</td>
+ <td>
+  <input type="text" placeholder="Number1" id="t1">
+ </td>
+</tr>
+
+
+
+<tr>
+ <td>Number2:</td>
+ <td>
+  <input type="text" placeholder="Number2" id="t2">
+ </td>
+</tr>
+
+
+<tr>
+ <td>Result:</td>
+ <td>
+  <input type="text" placeholder="Result" id="t3">
+ </td>
+</tr>
+
+
+<tr>
+ <td colspan="2">
+
+  <button onclick="sum()">Sum</button>
+  <button onclick="mul()">Mul</button>
+  <button onclick="sub()">Sub</button>
+  <button onclick="cls()">Clear</button>
+
+ </td>
+
+</tr>
+
+
+
+</table>
+
+
+<br>
+<br>
+
+<table border="1px" cellspacing="0px" cellpadding="4px" align="center" width="200px">
+ 
+ <tr>
+  <th>
+   <h2>Sms App</h2>
+  </th>
+ </tr>
+
+ <tr>
+  <td>
+
+   <textarea cols="30" rows="10" placeholder="Type message" id="m1" onkeyup="msg()" maxlength="100">
+
+   </textarea>
+  </td>
+ </tr>
+ 
+ <tr>
+  <td>
+   <p>Text Remaining:<span id="count">0</span>/100 </p>
+  </td>
+ </tr>
+ </table>
+ 
+
+
+
+<script>
+
+ // value: read or add html forms data only
+
+
+function sum(){
+
+let a=parseInt(document.getElementById("t1").value);
+let b=parseInt(document.getElementById("t2").value);
+let c=a+b;
+document.getElementById("t3").value=c;
+
+}
+
+
+
+function mul(){
+
+let a=parseInt(document.getElementById("t1").value);
+let b=parseInt(document.getElementById("t2").value);
+let c=a*b;
+document.getElementById("t3").value=c;
+
+}
+
+
+function sub(){
+
+let a=parseInt(document.getElementById("t1").value);
+let b=parseInt(document.getElementById("t2").value);
+let c=a-b;
+document.getElementById("t3").value=c;
+
+}
+
+function cls(){
+
+document.getElementById("t1").value="";
+document.getElementById("t2").value="";
+document.getElementById("t3").value="";
+
+
+}
+
+
+
+function msg(){
+
+
+ let m=document.getElementById("m1").value;
+
+ document.getElementById("count").innerText=m.length;
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.danger{
+color:red;
+}
+</style>
+
+</head>
+<body class="container mt-5">
+
+
+
+<table align="center" border="0px" cellspacing="0px" cellpadding="20px">
+
+<form action="a.jsp" method="post" id="myform">
+
+<tr>
+<td>
+<input type="text" placeholder="Username" id="uname"><br>
+<span id="span1" class="danger"></span>
+<span id="span20" class="danger"></span>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="password" placeholder="Password" id="pword"><br>
+<span id="span2" class="danger"></span>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<input type="password" placeholder="CPassword" id="cword"><br>
+<span id="span3" class="danger"></span>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="text" placeholder="Email" id="email"><br>
+<span id="span4" class="danger"></span>
+</td>
+</tr>
+ 
+ 
+
+<tr>
+<td>
+<input type="submit" value="Submit">
+</td>
+</tr>
+
+
+</form>
+
+</table>
+
+
+
+
+<script>
+
+
+let validation=(event)=>{
+
+let uname=document.getElementById("uname").value;
+let password=document.getElementById("pword").value;
+let cpassword=document.getElementById("cword").value;
+
+let email=document.getElementById("email").value;
+
+let usernamereg=/^[0-9A-Za-z]{6,16}$/;
+let emailreg=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+
+
+
+console.log("Username=",uname);
+console.log("Pasword=",password);
+console.log("Cpassword=",cpassword);
+
+
+// username validation
+if(uname=="")
+{
+
+ document.getElementById("span1").innerText="Enter Username";
+ document.getElementById("uname").style.border="1px solid red";
+ document.getElementById("uname").style.boxShadow="0px 0px 4px red";
+}
+
+else if(usernamereg.test(uname)==false)
+{
+
+ document.getElementById("span20").innerText="enter username 6-16 characters"
+
+}
+
+else{
+
+ document.getElementById("span1").innerText="";
+}
+
+
+
+//password validation
+
+
+if(password=="")
+{
+
+ document.getElementById("span2").innerText="Enter Password";
+ document.getElementById("pword").style.border="1px solid red";
+ document.getElementById("pword").style.boxShadow="0px 0px 4px red";
+}
+
+
+else{
+ document.getElementById("span2").innerText="";
+}
+
+
+// password validation
+
+if(password!==cpassword)
+{
+
+ document.getElementById("span3").innerText="password not matched!!"
+}
+
+
+else{
+ document.getElementById("span3").innerText="";
+}
+
+
+
+if(emailreg.test(email)==false)
+{
+
+ document.getElementById("span4").innerText="invalid email";
+}
+
+
+else{
+ document.getElementById("span4").innerText="";
+
+}
+
+event.preventDefault();
+
+
+}
+
+
+
+
+
+document.getElementById("myform").addEventListener('submit',validation);
+
+</script>
+</body>
+</html>

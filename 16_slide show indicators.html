@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<script src="bootstrap/js/bootstrap.bundle.js"></script>
+
+<style>
+ .carousel-indicators button{
+  width:16px !important;
+  height: 16px !important;
+  border-radius: 50%;
+ }
+
+ .carousel-indicators .active{
+  background-color:blue !important;
+ }
+
+ .carousel-caption{
+text-align: left;
+top:100px;
+color: cyan;
+
+ }
+
+</style>
+
+</head>
+<body>
+
+
+<div id="hello" class="carousel slide" data-bs-ride="carousel">
+
+
+<!-- indicators -->
+
+
+<div class="carousel-indicators">
+
+
+<button data-bs-target="#hello" data-bs-slide-to="0" class="active"></button>
+<button data-bs-target="#hello" data-bs-slide-to="1"></button>
+<button data-bs-target="#hello" data-bs-slide-to="2"></button>
+
+</div>
+
+
+<!-- adding images -->
+
+
+<div class="carousel-inner">
+
+
+<div class="carousel-item   active">
+ <img src="images/a.jpeg" class="w-100">
+
+ <div class="carousel-caption">
+  <h1>Nature is Beautiful !!</h1>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque tempore sapiente ipsam corrupti iusto vel provident vero deserunt eaque reprehenderit.</p>
+ </div>
+
+</div>
+
+<div class="carousel-item ">
+ <img src="images/a.jpeg" class="w-100">
+</div>
+
+<div class="carousel-item">
+ <img src="images/a.jpeg" class="w-100">
+</div>
+
+</div>
+
+
+<!-- control buttons -->
+
+
+
+<a href="#" class="carousel-control-next" data-bs-target="#hello" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</a>
+
+<a href="#" class="carousel-control-prev" data-bs-target="#hello" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</a>
+ 
+
+
+</div>
+
+
+
+</body>
+</html>

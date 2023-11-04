@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body class="container mt-5">
+
+
+
+ <p id="p1"></p>
+
+ <p id="p2"></p>
+
+ <p id="p3"></p>
+
+ <p>India time:<span id="i"></span></p>
+
+ 
+ <p>India time:<span id="a"></span></p>
+<script>
+
+let sysdate=new Date();
+
+
+document.getElementById("p1").innerText=sysdate;
+
+
+//proper date
+
+let date=sysdate.toLocaleDateString();
+
+document.getElementById("p2").innerText=date;
+
+// proper time
+
+
+let time=sysdate.toLocaleTimeString();
+
+
+document.getElementById("p3").innerText=time;
+
+
+
+function india(){
+
+ let time=new Date().toLocaleTimeString();
+ document.getElementById("i").innerText=time;
+
+}
+
+india();
+
+setInterval(india,1000);
+
+
+
+function america(){
+
+let time=new Date().toLocaleTimeString('en-US',{timeZone : 'America/New_York'});
+document.getElementById("a").innerText=time;
+
+}
+
+
+setInterval(america,1000);
+
+
+
+
+</script>
+</body>
+</html>

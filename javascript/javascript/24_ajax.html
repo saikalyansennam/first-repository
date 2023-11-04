@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body class="container mt-5">
+
+
+<button onclick="mydata()" class="btn btn-danger">GetData</button>
+
+
+<table class="table table-bordered table-striped mt-4 shadow">
+
+ <thead class="table-dark">
+  <tr>
+   <th>Id</th>
+   <th>Name</th>
+   <th>Username</th>
+   <th>Email</th>
+   <th>Street</th>
+     </tr>
+ </thead>
+
+ <tbody id="hai">
+
+ </tbody>
+
+</table>
+
+
+
+<script>
+
+function mydata(){
+
+ //object creation
+
+let xhr=new XMLHttpRequest();
+
+// open() =>create request
+
+xhr.open('get','https://jsonplaceholder.typicode.com/users',true);
+
+//send()=>send the request to the server
+
+xhr.send();
+
+// process the data
+
+xhr.onload=function(){
+
+ let users=xhr.responseText;
+let user =JSON.parse(users);
+console.log(user);
+displaydata(user);
+
+}
+
+
+
+
+}
+
+
+let displaydata=(myuser)=>{
+
+
+ let htmlrows='';
+
+
+ for(let u   of myuser)
+ {
+
+ htmlrows+=  `
+ 
+ <tr>
+  <td>${u.id}</td>
+  <td>${u.name}</td>
+  <td>${u.username}</td>
+  <td>${u.email}</td>
+  <td>${u.address.street}</td>
+ </tr>
+ 
+ 
+ ` 
+ }
+ 
+ console.log(htmlrows);
+
+ document.getElementById("hai").innerHTML=htmlrows;
+
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

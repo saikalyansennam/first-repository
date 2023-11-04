@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body class="container mt-5">
+ 
+
+<table>
+
+<thead>
+<tr>
+ <td>sid</td>
+ <td>name</td>
+ <td>course</td>
+ <td>fees</td>
+</tr>
+</thead>
+
+<tbody id="hai">
+
+</tbody>
+
+</table>
+
+
+
+
+<script>
+
+//object
+
+
+let student={
+
+ sid:101,
+ name:'sahasra',
+ course:'java',
+ fees:5000,
+
+ address:{
+  city:'hyd',
+  state:'t.s',
+  pincode:500072
+ },
+
+ account:{
+
+  saving:{
+   accno:112233,
+   bal:1000,
+  },
+
+  current:{
+   accno:778899,
+   bal:9000,
+  },
+
+ }
+
+
+}
+
+console.log(student);
+
+// how to access the object values (.) operator
+
+console.log(student.sid);
+console.log(student.name);
+console.log(student.course);
+console.log(student.fees);
+console.log(student.loc);
+
+
+console.log(student.address.city);
+console.log(student.address.state);
+
+console.log(student.account.saving.accno);
+console.log(student.account.saving.bal);
+
+// de-structuring 
+
+
+let{sid,name,course,fees}=student;
+console.log(sid,name,course,fees);
+
+
+let{city,state,pincode}=student.address;
+console.log(city,state,pincode);
+
+
+let{accno,bal}=student.account.current;
+console.log(accno,bal);
+
+
+let employee={
+
+ fname:'D',
+ lname:'Sahasra',
+ job:'manager',
+ sal:50000,
+
+ fullname(){
+  return this.fname + " " +this.lname
+ }
+
+
+}
+
+
+console.log(employee);
+
+console.log(employee.fullname());
+
+
+
+// array with object
+
+let students=[
+
+{sid:101,name:'a',course:'java',fees:1000},
+{sid:102,name:'b',course:'python',fees:2000},
+{sid:103,name:'c',course:'c',fees:3000},
+{sid:104,name:'d',course:'c++',fees:4000},
+{sid:105,name:'e',course:'react',fees:5000},
+{sid:106,name:'f',course:'angular',fees:9000},
+{sid:107,name:'g',course:'oracle',fees:7000},
+{sid:108,name:'h',course:'java',fees:3000},
+{sid:109,name:'i',course:'nodejs',fees:3000},
+{sid:110,name:'j',course:'express js',fees:4000},
+
+]
+console.log(students);
+
+console.log(students[0].sid);
+console.log(students[1].sid);
+
+
+let tablerows='';
+
+for( let s of students)
+{
+tablerows += `
+<tr>
+<td>${s.sid}</td>
+<td>${s.name}</td>
+<td>${s.course}</td>
+<td>${s.fees}</td>
+</tr>
+ `
+}
+
+console.log(tablerows);
+
+
+document.getElementById("hai").innerHTML=tablerows;
+</script>
+</body>
+</html>

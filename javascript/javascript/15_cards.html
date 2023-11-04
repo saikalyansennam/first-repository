@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+ 
+
+<div class="container mt-4">
+<div class="row" id="hai">
+
+
+</div>
+</div>
+
+
+
+
+
+<script>
+
+let cards=[
+
+{
+ title:'Hyderabad',
+ p:`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur cumque dignissimos eos et inventore nesciunt pariatur perspiciatis quasi quia?`,
+ img:`images/card_1.jpg`
+},
+
+{
+ title:'Chennai',
+ p:`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur cumque dignissimos eos et inventore nesciunt pariatur perspiciatis quasi quia?`,
+ img:`images/card_2.jpg`
+},
+
+{
+ title:'Delhi',
+ p:`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur cumque dignissimos eos et inventore nesciunt pariatur perspiciatis quasi quia?`,
+ img:`images/card_3.jpg`
+},
+
+
+{
+ title:'Delhi',
+ p:`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur cumque dignissimos eos et inventore nesciunt pariatur perspiciatis quasi quia?`,
+ img:`images/card_3.jpg`
+}
+
+]
+
+
+let cardinfo='';
+
+
+for(let c of cards)
+{
+cardinfo +=`
+
+<div class="col-lg-4">
+
+<div class="card shadow">
+
+<img src=${c.img}>
+
+<div class="card-body">
+
+<h2>${c.title}</h2>
+
+<p align="justify">${c.p}</p>
+
+<button class="btn btn-dark">Send</button>
+</div>
+
+</div>
+
+
+</div>
+
+
+`
+
+}
+
+
+console.log(cardinfo);
+
+document.getElementById("hai").innerHTML=cardinfo;
+
+</script>
+</body>
+</html>

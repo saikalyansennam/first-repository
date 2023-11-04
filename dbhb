@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<link rel="stylesheet" href="c:\Users\91984\Downloads\html\bootstrap\css\bootstrap.css">
+
+
+<style>
+ p{
+  text-align: justify;
+  font-size:18px;
+ }
+</style>
+
+</head>
+<body>
+
+
+ <!-- 4 columns layout -->
+
+<div class="container">
+    <div class="row">
+    
+    
+    <div class="col-lg-3 bg-warning">
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente accusamus minima quisquam. Molestiae quos in sint, aut nesciunt itaque ex dolorum expedita at magnam distinctio, incidunt dolores ad rem placeat.</p>
+    </div>
+    
+    <div class="col-lg-3 bg-light">
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente accusamus minima quisquam. Molestiae quos in sint, aut nesciunt itaque ex dolorum expedita at magnam distinctio, incidunt dolores ad rem placeat.</p>
+    </div>
+    
+    <div class="col-lg-3 bg-secondary">
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente accusamus minima quisquam. Molestiae quos in sint, aut nesciunt itaque ex dolorum expedita at magnam distinctio, incidunt dolores ad rem placeat.</p>
+    </div>
+    
+    <div class="col-lg-3 bg-success">
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente accusamus minima quisquam. Molestiae quos in sint, aut nesciunt itaque ex dolorum expedita at magnam distinctio, incidunt dolores ad rem placeat.</p>
+    </div>
+    
+    
+    </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+
+#move{
+
+ width: 200px;
+ height: 200px;
+ background: lightsalmon;
+ margin: 100px;
+
+ /* shorthand property: write the all property values at once */
+ transition: 1s transform linear ;
+}
+
+#move:hover{
+
+  /*transform: translateX(-600px); */
+
+  /*transform: translateY(-100px); */
+
+  /*transform: translate(600px,400px); */
+
+}
+
+
+#skew{
+
+ width: 200px;
+ height: 200px;
+ background: green;
+ transition:  transform 1s linear;
+ margin: 50px;
+}
+
+
+#skew:hover{
+ transform: skew(40deg,60deg);
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div id="move">
+
+</div>
+
+
+<div id="skew">
+
+</div>
+
+</body>
+</html>

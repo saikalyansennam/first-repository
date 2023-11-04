@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+ 
+
+<h4>Technologies</h4>
+
+<ol id="list">
+</ol>
+
+
+<select id="dropdown">
+
+</select>
+
+<script>
+
+//innerHTML: read or add the html code into html elements
+
+
+let Technologies=["html","css","javascript","react","angualr","node js","oracle","java","mongodb"];
+
+
+let myhtml="";
+
+
+for( let t of Technologies)
+{
+
+ myhtml+=`<li>${t}</li>\n`;
+
+
+}
+
+console.log(myhtml);
+
+
+document.getElementById("list").innerHTML=myhtml;
+
+
+
+let year=[2021,2023,2024,2025,2026,2027,2028,2029,2030];
+
+
+let mydropdown='';
+
+for(let y  of year)
+{
+
+ mydropdown += `<option>${y}</option>\n`
+
+}
+
+console.log(mydropdown);
+
+
+document.getElementById("dropdown").innerHTML=mydropdown;
+
+</script>
+</body>
+</html>

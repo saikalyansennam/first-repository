@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<img src="C:\Users\91984\Downloads\javascript\photo\b3.png" width="200px" height="200px" id="img1">
+
+
+<img src="C:\Users\91984\Downloads\javascript\photo\b3.png" width="200px" height="200px" id="img2" onmouseover="myimg()" onmouseout="myimg1()">
+
+<br>
+<br>
+
+
+
+<input type="password" placeholder="Password" id="t1">
+<br>
+<input type="checkbox" onchange="validation()">Show Password
+
+
+<script>
+
+// setattribute, getattribute
+
+let p=document.getElementById("img1").getAttribute('src');
+
+console.log(p);
+
+let w=document.getElementById("img1").getAttribute('width');
+
+console.log(w);
+
+
+
+function myimg(){
+
+ document.getElementById("img2").setAttribute('src','images/food2.jpg');
+
+}
+
+function myimg1(){
+ document.getElementById("img2").setAttribute('src','images/food4.jpg');
+
+
+}
+
+function validation(){
+
+
+ let p=document.getElementById("t1").getAttribute('type');
+
+ if(p=="password")
+ {
+
+  document.getElementById("t1").setAttribute('type','text');
+ }
+
+ else{
+  document.getElementById("t1").setAttribute('type','password');
+ }
+
+
+}
+</script>
+</body>
+</html>

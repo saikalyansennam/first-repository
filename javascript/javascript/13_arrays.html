@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+ 
+
+
+
+
+
+<script>
+
+//array methods
+
+
+let x=[10,20,30,40,50];
+
+console.log(x);
+
+
+//push
+
+x.push(60);
+console.log(x);
+
+
+//unshif()
+
+
+x.unshift(9);
+console.log(x);
+
+//splice
+
+
+x.splice(3,0,1,2,3);
+console.log(x);
+
+
+//pop()
+
+
+x.pop();
+console.log(x);
+
+
+// shift()
+
+x.shift();
+console.log(x);
+
+//splice
+
+x.splice(1,5);
+console.log(x);
+
+// sort()
+
+
+let salary=[1000,5000,6000,7000,4000,2000,8000];
+
+console.log(salary);
+
+
+salary.sort();
+console.log(salary);
+
+
+//reverse()
+
+salary.reverse();
+console.log(salary);
+
+//concat()
+
+
+let even=[2,4,6,8,10,12,14,16];
+let odd=[1,3,5,7,9];
+
+let allnum=even.concat(odd);
+console.log(allnum);
+
+
+// spread operator(...): to copy the array data or object data using spread operator
+
+
+let mynum=[...even, ...odd];
+console.log(mynum);
+
+// map(): transfer the elements  from existing to new array (one by one)
+
+
+let tech=["html","css","javascript","jquery","angular","react"];
+
+let mytech=tech.map(function(t){
+
+ return t;
+});
+
+console.log(mytech);
+
+
+
+
+// filter
+
+let i=[1,2,3,4,5,6,7,8,9,10];
+
+let j=i.filter(function(n)
+{
+
+ return n%2==0;
+})
+
+
+console.log(j);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

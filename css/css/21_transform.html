@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+#scale{
+
+ width: 100px;
+ height:100px;
+ background: red;
+ margin: 150px;
+/* 
+ transform: scaleX(10); */
+
+ /* transform: scaleY(4); */
+ /* transform: scale(7,2); */
+
+ transition-property: all;
+ transition-duration: 5s;
+
+}
+
+#scale:hover{
+
+ transform: scale(3,3);
+ background: green;
+
+}
+
+h1{
+ font-size: 60px;
+ text-align: center;
+ color:blue;
+
+ transition-property: color;
+ transition-duration: 2s;
+ 
+}
+
+h1:hover{
+ color:red;
+}
+
+</style>
+</head>
+
+
+<body>
+
+ <h1>UI Technologies</h1>
+
+
+<div id="scale">
+
+</div>
+
+
+</body>
+</html>
